@@ -15,7 +15,7 @@ A simple helper for uploading files to AWS S3. It returns the download URL if th
 
 ## Getting started
 
-No special configuration required for this package.
+No special configuration are required for this package.
 
 ## Usage
 
@@ -35,7 +35,7 @@ final result = await AwsS3Helper().uploadFile(
 );
 
 if (result != null) {
-    loggger.f('File Uploaded successfully! URL: $result');
+    print('File Uploaded successfully! URL: $result');
     return result;
 } else {
     return null;
@@ -44,4 +44,4 @@ if (result != null) {
 
 ## Note
 
-This simple package was created as existing package are either unstable or lacking maintenance. 
+This simple package was created as an alternative to existing packages that are either unstable or lacking maintenance. 
