@@ -15,9 +15,11 @@ A simple helper for uploading files to AWS S3. It returns the download URL if th
 
 ## Getting started
 
-Get your AWS credentials. No special configuration required for this package.
+No special configuration required for this package.
 
 ## Usage
+
+Get your AWS credentials: accessKey, secretKey, region, and S3 bucket name.
 
 A typical usage example is shown below:
 
