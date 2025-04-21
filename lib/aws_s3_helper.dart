@@ -161,17 +161,16 @@ class AwsS3Helper {
 
       // Sending the request with the signed headers
       final uploadUrl = '$endpointUrl/$fileName';
-      libLogger.f('UploadedUrl: $uploadUrl');
 
       Response response = await dio.put(
         uploadUrl,
         data: body,
         options: Options(headers: headers),
       );
-      libLogger.w('response: ${response.toString()}');
+      libLogger.i('response: ${response.toString()}');
 
       if (response.statusCode == 200) {
-        libLogger.f('File uploaded successfully');
+        libLogger.f('File uploaded successfully \nURL: $uploadUrl');
         return uploadUrl;
       } else {
         libLogger.w('File upload failed: ${response.statusCode}');
