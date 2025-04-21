@@ -96,7 +96,8 @@ class AwsS3Helper {
     return "${now.year.toString().padLeft(4, '0')}${(now.month).toString().padLeft(2, '0')}${(now.day).toString().padLeft(2, '0')}";
   }
 
-  Future<String?> uploadFileToS3({
+  /// Returns the URL of the uploaded file and null if the upload fails.
+  Future<String?> uploadFile({
     required File file,
     required String s3BucketName,
     required String s3Region,
