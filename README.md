@@ -11,29 +11,35 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/to/develop-packages).
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+A simple helper for uploading files to AWS S3. It returns the download URL if the upload is successful, OR null if it failed.
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Get your AWS credentials. No special configuration required for this package.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+A typical usage example is shown below:
 
 ```dart
-const like = 'sample';
+
+final result = await AwsS3Helper().uploadFile(
+    file: fileToUpload,
+    s3BucketName: "s3BucketName",
+    s3Region: "s3Region",
+    accessKey: "accessKey",
+    secretKey: "secretKey",
+    directory: "directory", //(Optional)
+);
+
+if (result != null) {
+    loggger.f('File Uploaded successfully! URL: $result');
+    return result;
+} else {
+    return null;
+}
 ```
 
-## Additional information
+## Note
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+This simple package was created as existing package are either unstable or lacking maintenance. 
