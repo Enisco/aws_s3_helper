@@ -1,7 +1,7 @@
 name: aws_s3_helper
 description: "A simple helper for uploading and downloading files to/from AWS S3."
 version: 0.0.1
-homepage:
+repository: https://github.com/Enisco/aws_s3_helper
 
 environment:
   sdk: ^3.7.0
