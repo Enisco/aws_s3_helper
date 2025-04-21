@@ -8,11 +8,13 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
+  flutter:
+    sdk: flutter
+    
   convert: ^3.1.2
   crypto: ^3.0.6
   dio: ^5.8.0+1
-  flutter:
-    sdk: flutter
+  path: any
   logger: ^2.5.0
 
 dev_dependencies:
